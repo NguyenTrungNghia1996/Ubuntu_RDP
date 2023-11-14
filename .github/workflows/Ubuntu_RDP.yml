@@ -11,7 +11,7 @@ on:
         default: '123456'
         required: true
       authtoken:
-        description: 'NGROK_AUTH_TOKEN'
+        description: '1n391cGDskZaeIjGacWKh0NS93J_83n7ttgsiQJzVtV2R5nn1'
         required: true
       computername:
         description: 'MACHINE_NAME'
