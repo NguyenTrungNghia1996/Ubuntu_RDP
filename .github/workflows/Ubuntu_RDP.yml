@@ -5,6 +5,7 @@ on:
     inputs:
       authcode:
         description: 'Visit https://remotedesktop.google.com/headless & paste the authorization code'
+        default: '4/0AfJohXmVnypAjauM6bgEV3vEzpA4tFGUAXms0iPy3IU3PHW0Bgn1_wdcgP-94rMZvTUKBg'
         required: true
       pincode:
         description: 'Enter a pin code'
