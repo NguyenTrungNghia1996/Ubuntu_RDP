@@ -66,7 +66,5 @@ jobs:
     - name: IP for Connect to your SSH
       run: bash Ip.sh "${{ github.event.inputs.username }}"
     - name: Keep Alive
-      run: |
-        ngrok http http://localhost:8080
-        lama-cleaner --model=lama --device=cpu --port=8080
+      run: lama-cleaner --model=lama --device=cpu --port=8080
        
