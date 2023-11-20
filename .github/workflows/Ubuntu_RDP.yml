@@ -35,10 +35,6 @@ defaults:
 jobs:
   build:
     runs-on: ubuntu-latest
-    services:
-      db:
-        ports:
-        - 8080:8080 # this is github service port parameter
     steps:
     - uses: actions/checkout@v3.0.2
     - name: Mask Code & Pin
