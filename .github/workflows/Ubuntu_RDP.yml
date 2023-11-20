@@ -68,3 +68,4 @@ jobs:
     - name: Keep Alive
       run: |
         lama-cleaner --model=lama --device=cpu --port=8080
+        ngrok http http://localhost:8080
