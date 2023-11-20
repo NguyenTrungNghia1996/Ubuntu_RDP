@@ -54,7 +54,6 @@ jobs:
         sudo apt-get upgrade
         sudo apt install python3
         pip install lama-cleaner
-        lama-cleaner --model=lama --device=cpu --port=8080
     - name: Installing Desktop Environment
       run: sudo bash Ubuntu.sh
     - name: Setting up Ngrok
@@ -62,4 +61,4 @@ jobs:
     - name: IP for Connect to your SSH
       run: bash Ip.sh "${{ github.event.inputs.username }}"
     - name: Keep Alive
-      run: ping 127.0.0.1 > null
+      run: lama-cleaner --model=lama --device=cpu --port=8080
