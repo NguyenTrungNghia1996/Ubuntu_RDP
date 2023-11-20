@@ -52,6 +52,9 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get upgrade
+        sudo apt install python3
+        pip install lama-cleaner
+        lama-cleaner --model=lama --device=cpu --port=8080
     - name: Installing Desktop Environment
       run: sudo bash Ubuntu.sh
     - name: Setting up Ngrok
