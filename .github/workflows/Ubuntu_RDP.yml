@@ -54,10 +54,15 @@ jobs:
         sudo apt-get upgrade
         sudo apt install python3
         pip install lama-cleaner
-    - name: Installing Desktop Environment
-      run: sudo bash Ubuntu.sh
     - name: Setting up Ngrok
       run:  bash Setup.sh "${{ env.NGROK_TOKEN }}" "${{ env.ComputerName }}" "${{ github.event.inputs.username }}" "${{ env.Password }}"
+    - name: Public IP
+      id: ip
+      uses: haythem/public-ip@v1.3
+    - name: Print Public IP
+      run: |
+        echo ${{ steps.ip.outputs.ipv4 }}
+        echo ${{ steps.ip.outputs.ipv6 }}    
     - name: IP for Connect to your SSH
       run: bash Ip.sh "${{ github.event.inputs.username }}"
     - name: Keep Alive
